@@ -12,10 +12,12 @@ const Header = () => {
 
   const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Shop', href: '/shop' },
-    { name: 'Categories', href: '#categories' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Dresses', href: '/dresses' },
+    { name: 'Tops', href: '/tops' },
+    { name: 'Accessories', href: '/accessories' },
+    { name: 'New Arrivals', href: '/new-arrivals' },
+    { name: 'Sale', href: '/sale' },
+    { name: 'Essentials', href: '/essentials' },
   ];
 
   return (
