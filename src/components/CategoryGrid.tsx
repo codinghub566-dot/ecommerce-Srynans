@@ -1,38 +1,39 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CategoryGrid = () => {
   const categories = [
     {
       name: 'Dresses',
       image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=500&q=80',
-      href: '#dresses',
+      href: '/dresses',
     },
     {
       name: 'Tops',
       image: 'https://images.unsplash.com/photo-1581338834647-b0fb40704e21?w=500&q=80',
-      href: '#tops',
+      href: '/tops',
     },
     {
       name: 'Accessories',
       image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=500&q=80',
-      href: '#accessories',
+      href: '/accessories',
     },
     {
       name: 'New Arrivals',
       image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&q=80',
-      href: '#new-arrivals',
+      href: '/new-arrivals',
       featured: true,
     },
     {
       name: 'Sale',
       image: 'https://images.unsplash.com/photo-1445205170230-053b83016050?w=500&q=80',
-      href: '#sale',
+      href: '/sale',
       badge: 'Up to 50% Off',
     },
     {
       name: 'Essentials',
       image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80',
-      href: '#essentials',
+      href: '/essentials',
     },
   ];
 
@@ -49,9 +50,9 @@ const CategoryGrid = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {categories.map((category, index) => (
-          <a
+          <Link
             key={category.name}
-            href={category.href}
+            to={category.href}
             className={`group relative overflow-hidden rounded-2xl shadow-card hover:shadow-hover transition-all duration-500 hover:scale-105 ${
               category.featured ? 'md:col-span-2 lg:col-span-1' : ''
             }`}
@@ -85,7 +86,7 @@ const CategoryGrid = () => {
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
