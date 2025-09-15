@@ -328,7 +328,16 @@ const CategoryPage = ({ title, description, products, categoryName }: CategoryPa
 
                     {/* Hover Actions */}
                     <div className="absolute top-3 right-3 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <Button variant="ghost" size="sm" className="p-2 bg-background/80 backdrop-blur-sm hover:bg-background rounded-full">
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        className="p-2 bg-background/80 backdrop-blur-sm hover:bg-background rounded-full"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          // Add to wishlist functionality
+                          console.log('Added to wishlist:', product.name);
+                        }}
+                      >
                         <Heart className="w-4 h-4" />
                       </Button>
                       <Link to={`/product/${product.id}`}>
